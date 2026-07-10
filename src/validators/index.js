@@ -1,4 +1,5 @@
 import {body} from "express-validator" ;
+import {AvailableUserRole} from "../utils/constants.js" ;
 
 const userRegisterValidator = () => {
     return [
@@ -72,7 +73,7 @@ const createProjectValidator = () => {
   ];
 };
 
-const addMembertoProjectValidator = () => {
+const addMemberToProjectValidator = () => {
   return [
     body("email")
       .trim()
@@ -88,6 +89,7 @@ const addMembertoProjectValidator = () => {
   ];
 };
 
+
 export {
   userRegisterValidator,
   userLoginValidator,
@@ -95,5 +97,5 @@ export {
   userForgotPasswordValidator,
   userResetForgotPasswordValidator,
   createProjectValidator,
-  addMembertoProjectValidator,
+  addMemberToProjectValidator,
 };
